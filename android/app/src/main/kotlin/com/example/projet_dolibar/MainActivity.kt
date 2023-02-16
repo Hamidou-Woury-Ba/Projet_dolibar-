@@ -1,4 +1,4 @@
-package com.example.mon_projet
+package com.example.projet_dolibar
 
 import io.flutter.embedding.android.FlutterActivity
 

@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.mon_projet">
+    package="com.example.projet_dolibar">
    <application
-        android:label="mon_projet"
+        android:label="projet_dolibar"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
