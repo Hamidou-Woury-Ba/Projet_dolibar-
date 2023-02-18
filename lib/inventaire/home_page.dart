@@ -41,12 +41,11 @@ class HomePage extends StatelessWidget {
               ),
               ListTile(
                 onTap: () {
-                  /*
                   Navigator.of(context).pushReplacement(
                     MaterialPageRoute(builder: (context) {
                       return InventoryPage();
                     }),
-                  );*/
+                  );
                 },
                 leading: const Icon(Icons.logout),
                 title: const Text(
@@ -97,175 +96,7 @@ class HomePage extends StatelessWidget {
                   ),
                 ],
               ),
-            ), /*
-            GestureDetector(
-              onTap: (() {
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (BuildContext context) {
-                      return const DescriptionPage(
-                        title: "How To get rich",
-                        image: "images/wealth.png",
-                      );
-                    },
-                  ),
-                );
-              }),
-              child: Container(
-                margin: const EdgeInsets.symmetric(
-                  horizontal: 10,
-                  vertical: 5,
-                ),
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(15),
-                  color: Colors.white,
-                  boxShadow: const [
-                    BoxShadow(
-                      color: Colors.black12,
-                      spreadRadius: 2,
-                      blurRadius: 2,
-                      offset: Offset(2, 2),
-                    ),
-                  ],
-                ),
-                child: Column(
-                  children: [
-                    Image.asset('images/wealth.png'),
-                    const ListTile(
-                      title: Text("How to get rich"),
-                      trailing: Icon(Icons.arrow_forward_ios_rounded),
-                    )
-                  ],
-                ),
-              ),
             ),
-            GestureDetector(
-              onTap: (() {
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (BuildContext context) {
-                      return const DescriptionPage(
-                        title: "Saving money ways",
-                        image: "images/urban-saving-money.png",
-                      );
-                    },
-                  ),
-                );
-              }),
-              child: Container(
-                margin: const EdgeInsets.symmetric(
-                  horizontal: 10,
-                  vertical: 5,
-                ),
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(15),
-                  color: Colors.white,
-                  boxShadow: const [
-                    BoxShadow(
-                      color: Colors.black12,
-                      spreadRadius: 2,
-                      blurRadius: 2,
-                      offset: Offset(2, 2),
-                    ),
-                  ],
-                ),
-                child: Column(
-                  children: [
-                    Image.asset('images/urban-saving-money.png'),
-                    const ListTile(
-                      title: Text("Saving money ways"),
-                      trailing: Icon(Icons.arrow_forward_ios_rounded),
-                    )
-                  ],
-                ),
-              ),
-            ),
-            GestureDetector(
-              onTap: (() {
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (BuildContext context) {
-                      return const DescriptionPage(
-                        title: "sending global messages",
-                        image: "images/martina-guy-sends-a-message-from-phone.png",
-                      );
-                    },
-                  ),
-                );
-              }),
-              child: Container(
-                margin: const EdgeInsets.symmetric(
-                  horizontal: 10,
-                  vertical: 5,
-                ),
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(15),
-                  color: Colors.white,
-                  boxShadow: const [
-                    BoxShadow(
-                      color: Colors.black12,
-                      spreadRadius: 2,
-                      blurRadius: 2,
-                      offset: Offset(2, 2),
-                    ),
-                  ],
-                ),
-                child: Column(
-                  children: [
-                    Image.asset("images/martina-guy-sends-a-message-from-phone.png"),
-                    const ListTile(
-                      title: Text("sending global messages"),
-                      trailing: Icon(Icons.arrow_forward_ios_rounded),
-                    )
-                  ],
-                ),
-              ),
-            ),
-            GestureDetector(
-              onTap: (() {
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (BuildContext context) {
-                      return const DescriptionPage(
-                        title: "opening a new shop",
-                        image: "images/login.png",
-                      );
-                    },
-                  ),
-                );
-              }),
-              child: Container(
-                margin: const EdgeInsets.symmetric(
-                  horizontal: 10,
-                  vertical: 5,
-                ),
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(15),
-                  color: Colors.white,
-                  boxShadow: const [
-                    BoxShadow(
-                      color: Colors.black12,
-                      spreadRadius: 2,
-                      blurRadius: 2,
-                      offset: Offset(2, 2),
-                    ),
-                  ],
-                ),
-                child: Column(
-                  children: [
-                    Image.asset("images/login.png"),
-                    const ListTile(
-                      title: Text("opening a new shop"),
-                      trailing: Icon(Icons.arrow_forward_ios_rounded),
-                    )
-                  ],
-                ),
-              ),
-            ),*/
           ],
         ),
       ),

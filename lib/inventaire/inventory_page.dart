@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'add_product_page.dart';
-import 'product.dart';
+//import 'product.dart';
 
 class InventoryPage extends StatefulWidget {
   @override
@@ -10,7 +10,7 @@ class InventoryPage extends StatefulWidget {
 }
 
 class _InventoryPageState extends State<InventoryPage> {
-  List<Product> _products = [];
+  List<dynamic> _products = [];
 
   get http => null;
 
@@ -22,7 +22,7 @@ class _InventoryPageState extends State<InventoryPage> {
 
   void _loadProducts() async {
     final response = await http.get(Uri.parse(
-        'http://localhost/dolibarr/api/index.php/explorer/product/inventory/DOLAPIKEY=3gai2G6Amdio7AS5WD2GoeA387H0rBnY'));
+        'http://localhost/dolibarr/api/index.php/explorer?DOLAPIKEY=3gai2G6Amdio7AS5WD2GoeA387H0rBnY'));
     if (response.statusCode == 200) {
       final jsonData = jsonDecode(response.body);
       setState(() {
@@ -43,19 +43,26 @@ class _InventoryPageState extends State<InventoryPage> {
           final product = _products[index];
           return ListTile(
             title: Text(product.label),
-            subtitle: Text(product.libelle),
+            subtitle: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(product.libelle),
+                Text(product.entrepot),
+                Text(product.produit),
+              ],
+            ),
           );
         },
       ),
-      floatingActionButton: FloatingActionButton(
+      /*floatingActionButton: FloatingActionButton(
         onPressed: () {
           Navigator.push(
             context,
             MaterialPageRoute(builder: (context) => AddProductPage()),
           );
         },
-        child: Icon(Icons.add),
-      ),
+        //child: Icon(Icons.add),
+      ),*/
     );
   }
 }

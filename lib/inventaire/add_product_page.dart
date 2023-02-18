@@ -23,7 +23,7 @@ class _AddProductPageState extends State<AddProductPage> {
   void _addProduct() async {
     final response = await http.post(
       Uri.parse(
-          'http://localhost/dolibarr/api/index.php/stocks?DOLAPIKEY=3gai2G6Amdio7AS5WD2GoeA387H0rBnY'),
+          'http://localhost/dolibarr/api/index.php/explorer?DOLAPIKEY=3gai2G6Amdio7AS5WD2GoeA387H0rBnY'),
       headers: {
         'Content-Type': 'application/json; charset=UTF-8',
       },
@@ -75,9 +75,7 @@ class _AddProductPageState extends State<AddProductPage> {
                   if (value!.isEmpty) {
                     return 'Veuillez entrer la référence du produit';
                   }
-                  if (int.tryParse(value) == null) {
-                    return 'Veuillez entrer une référence valide';
-                  }
+
                   return null;
                 },
               ),
