@@ -43,7 +43,7 @@ class _InventoryPageState extends State<InventoryPage> {
           final product = _products[index];
           return ListTile(
             title: Text(product.label),
-            subtitle: Text('Stock: ${product.stock}'),
+            subtitle: Text(product.libelle),
           );
         },
       ),
