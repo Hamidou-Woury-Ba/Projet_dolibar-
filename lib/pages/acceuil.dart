@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:http/http.dart' as http;
+import 'package:projet_dolibar/pages/stock.dart';
+import 'inventaire.dart';
 import 'produit.dart';
 
 class Acceuil extends StatefulWidget {
@@ -31,8 +33,8 @@ class _AcceuilState extends State<Acceuil> {
           child: Column(children: [
          SizedBox(height: 40),
           moduleProduit(context) ,
-          moduleUtilisateur(context) ,
-          moduleNoteDeFrais,
+          moduleInventaire(context),
+          moduleStock(context) ,
         ],
         ),
         ),
@@ -104,7 +106,7 @@ Widget moduleProduit(BuildContext context) => Container(
   ),
 );
 
-  Widget moduleUtilisateur(BuildContext context) => Container(
+  Widget moduleInventaire(BuildContext context) => Container(
     decoration: BoxDecoration(
       borderRadius: BorderRadius.circular(12),
       color: Color.fromARGB(255, 58, 59, 60),
@@ -132,7 +134,7 @@ Widget moduleProduit(BuildContext context) => Container(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: const [
           Text(
-            "Utilisateurs & Groupes",
+            "Inventaires",
             style: TextStyle(
               color: Color.fromARGB(255, 255, 125, 125),
               fontSize: 18,
@@ -141,14 +143,7 @@ Widget moduleProduit(BuildContext context) => Container(
           ),
           SizedBox(height: 10),
           Text(
-            "Gestions des utilisateurs / employés",
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 14,
-            ),
-          ),
-          Text(
-            "et groupes",
+            "Gestions des inventaires",
             style: TextStyle(
               color: Colors.white,
               fontSize: 14,
@@ -157,7 +152,11 @@ Widget moduleProduit(BuildContext context) => Container(
         ],
       ),
       TextButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.of(context).push(
+            MaterialPageRoute(builder: ( BuildContext context) => Inventaire()),
+            );
+        },
         child: Text(
           'Details',
           style: TextStyle(
@@ -171,7 +170,7 @@ Widget moduleProduit(BuildContext context) => Container(
 }
 
 
-Widget moduleNoteDeFrais = Container(
+Widget moduleStock(BuildContext context) => Container(
   decoration: BoxDecoration(
     borderRadius: BorderRadius.circular(12),
     color: Color.fromARGB(255, 58, 59, 60),
@@ -199,7 +198,7 @@ Widget moduleNoteDeFrais = Container(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: const [
           Text(
-            "Notes de Frais",
+            "Stock",
             textAlign: TextAlign.start,
             style: TextStyle(
               color: Color.fromARGB(255, 255, 125, 125),
@@ -209,15 +208,7 @@ Widget moduleNoteDeFrais = Container(
           ),
           SizedBox(height: 10),
           Text(
-            "Gestions et déclarations des notes",
-            textAlign: TextAlign.start,
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 14,
-            ),
-          ),
-          Text(
-            "de frais (transport, repas)",
+            "Gestions des stocks",
             textAlign: TextAlign.start,
             style: TextStyle(
               color: Colors.white,
@@ -227,7 +218,11 @@ Widget moduleNoteDeFrais = Container(
         ],
       ),
       TextButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.of(context).push(
+            MaterialPageRoute(builder: ( BuildContext context) => Stock()),
+            );
+        },
         child: Text(
           'Details',
           style: TextStyle(
